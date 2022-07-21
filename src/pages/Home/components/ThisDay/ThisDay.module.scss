@@ -4,7 +4,7 @@
   padding: 20px;
   max-width: 400px;
   width: 100%;
-  background: $lite-background;
+  background: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 }
@@ -37,7 +37,7 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 49px;
-  color: $lite-color;
+  color: var(#{--text-color-default});
 }
 
 .bottom_block {

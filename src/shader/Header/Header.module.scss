@@ -1,3 +1,6 @@
+@import '../../styles/variables.scss';
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -12,11 +15,15 @@
 }
 
 
-.change_theme, .logo{
-  margin-right: 20px;
-}
+.change_theme,
 .logo {
   margin-right: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  margin-right: 20px;
+
   svg {
     width: 65px;
     height: 65px;
@@ -27,5 +34,5 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 25px;
+  color: $primary-color;
 }
-

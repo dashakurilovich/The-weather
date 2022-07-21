@@ -8,7 +8,7 @@ import { Popup } from './shader/PopUp/Popup';
 function App() {
   return (
     <div className="global_container">
-      <Popup />
+      {/* <Popup /> */}
       <div className="container">
         <Header />
         <Routes>

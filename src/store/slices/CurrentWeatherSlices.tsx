@@ -11,18 +11,27 @@ type ResponseType = {
 type CurrentWeather = {
   weather: Weather,
   isLoading: boolean,
-  respone: ResponseType
+  response: ResponseType
 }
 
 
-const initialState = {
-  weather: {},
+const initialState: CurrentWeather = {
+  weather: {
+    main: {
+      temp: 0,
+      feels_like: 0,
+      temp_min: 0,
+      temp_max: 0,
+      pressure: 0,
+      humidity: 0
+    },
+  },
   isLoading: false,
   response: {
     status: 0,
-    message: ''
-  }
-}
+    message: '',
+  },
+};
 
 export const currentWeatherSlice = createSlice({
   name: 'current_weather',

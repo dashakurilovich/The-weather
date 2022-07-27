@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import React from "react";
 import { GlobalSvgSelector } from "../../../../assets/icons/global/GlobalSvgSelector";
 import { Weather } from "../../../../store/types/types";
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export const ThisDay = ({ weather }: Props) => {
+  const dateNow = dayjs().format('HH : mm');
+
   return (
     <header className={s.this_day}>
       <div className={s.top_block}>
@@ -19,10 +22,10 @@ export const ThisDay = ({ weather }: Props) => {
       </div>
       <div className={s.bottom_block}>
         <div className={s.this_time}>
-          Время : <span> 21:54</span>
-        </div> 
+          Время: <span> {dateNow}</span>
+        </div>
         <div className={s.this_city}>
-          Город : <span> Батуми</span>
+          Город: <span> {weather.name}</span>
         </div>
       </div>
     </header>

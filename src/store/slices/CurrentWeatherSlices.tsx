@@ -25,6 +25,7 @@ const initialState: CurrentWeather = {
       pressure: 0,
       humidity: 0
     },
+    name: ''
   },
   isLoading: false,
   response: {

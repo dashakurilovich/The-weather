@@ -6,5 +6,7 @@ export type Weather = {
     temp_max: number,
     pressure: number,
     humidity: number
-  };
+  },
+  name: string
 }
+

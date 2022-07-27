@@ -7,6 +7,14 @@ export type Weather = {
     pressure: number,
     humidity: number
   },
-  name: string
+  name: string,
+  weather: {
+    main: string,
+    description: string
+    icon:string
+  },
+  wind: {
+    speed: number
+  },
 }
 

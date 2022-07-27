@@ -25,13 +25,22 @@ const initialState: CurrentWeather = {
       pressure: 0,
       humidity: 0
     },
-    name: ''
+    name: '',
+    weather: {
+      main: ' ',
+      description: '',
+      icon:''
+    },
+    wind: {
+      speed: 0
+    },
   },
   isLoading: false,
   response: {
     status: 0,
     message: '',
   },
+
 };
 
 export const currentWeatherSlice = createSlice({

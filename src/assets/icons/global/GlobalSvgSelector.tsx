@@ -1,11 +1,11 @@
 
 
 interface Props {
-  id: string
+  icon: string
 }
 
-export const GlobalSvgSelector = ({ id }: Props) => {
-  switch (id) {
+export const GlobalSvgSelector = ({ icon }: Props) => {
+  switch (icon) {
     case 'header-logo':
       return (
         <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">

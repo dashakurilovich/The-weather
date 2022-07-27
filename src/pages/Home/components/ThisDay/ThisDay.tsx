@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const ThisDay = ({ weather }: Props) => {
+
   const dateNow = dayjs().format('HH : mm');
 
   return (
@@ -18,7 +19,7 @@ export const ThisDay = ({ weather }: Props) => {
           <div className={s.this_temp}>{Math.floor(weather.main.temp)}°C</div>
           <div className={s.this_day_name}>Сегодня</div>
         </div>
-        <GlobalSvgSelector id="sun" />
+        <GlobalSvgSelector icon='sun' />
       </div>
       <div className={s.bottom_block}>
         <div className={s.this_time}>

@@ -47,11 +47,11 @@ export const Header = (props: Props) => {
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
-        <div className={s.logo}><GlobalSvgSelector id="header-logo" /></div>
+        <div className={s.logo}><GlobalSvgSelector icon="header-logo" /></div>
         <div className={s.title}>React weather</div>
       </div>
       <div className={s.wrapper}>
-        <div className={s.change_theme} onClick={changeTheme}><GlobalSvgSelector id="change_theme" /></div>
+        <div className={s.change_theme} onClick={changeTheme}><GlobalSvgSelector icon="change_theme" /></div>
         <Select styles={colourStyles} options={cities} value={selectedCity} onChange={changeSelectedCity} />
       </div>
     </header>

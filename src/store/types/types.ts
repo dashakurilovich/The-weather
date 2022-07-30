@@ -16,5 +16,6 @@ export type Weather = {
   wind: {
     speed: number
   },
+  timezone:number
 }
 

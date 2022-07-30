@@ -19,22 +19,22 @@ export const ThisDayInfo = ({ weather }: Props) => {
   const items = [{
     icon_id: 'temp',
     name: 'Температура',
-    value: `${weather.main.temp}° - ощущается как ${weather.main.feels_like}°`,
+    value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°`,
   },
   {
     icon_id: 'pressure',
     name: 'Давление',
-    value: `${weather.main.pressure}мм ртутного столба - нормальное`,
+    value: `${Math.floor(weather.main.pressure)} мм ртутного столба - нормальное`,
   },
   {
-    icon_id: 'precipitation',
-    name: 'Осадки',
-    value: 'Без осадков',
+    icon_id: 'humidity',
+    name: 'Влажность',
+    value: `${weather.main.humidity} %`,
   },
   {
     icon_id: 'wind',
     name: 'Ветер',
-    value: `${weather.wind.speed} м/с юго-запад - лёгкий ветер `,
+    value: `${Math.floor(weather.wind.speed)} м/с юго-запад - лёгкий ветер `,
   }]
 
   return (

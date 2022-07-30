@@ -29,17 +29,19 @@ const initialState: CurrentWeather = {
     weather: {
       main: ' ',
       description: '',
-      icon:''
+      icon: ''
     },
     wind: {
       speed: 0
     },
+    timezone: 0
   },
   isLoading: false,
   response: {
     status: 0,
     message: '',
   },
+
 
 };
 

@@ -1,6 +1,8 @@
 import dayjs from "dayjs";
 import React from "react";
 import { GlobalSvgSelector } from "../../../../assets/icons/global/GlobalSvgSelector";
+import { useCustomSelector } from "../../../../hooks/store";
+import { selectCurrentWeatherData } from "../../../../store/selectors";
 import { Weather } from "../../../../store/types/types";
 import s from './ThisDay.module.scss';
 
@@ -10,7 +12,12 @@ interface Props {
 
 export const ThisDay = ({ weather }: Props) => {
 
-  const dateNow = dayjs().format('HH : mm');
+  const currentWeather = useCustomSelector(selectCurrentWeatherData);
+  const timeZoneValue = currentWeather.weather.timezone;
+
+  const dateNow = dayjs();
+  const grinvichTime = dateNow.add(new Date().getTimezoneOffset(), 'minutes');
+  const timeWithTimezone = grinvichTime.add(timeZoneValue, 'seconds').format('HH : mm')
 
   return (
     <header className={s.this_day}>
@@ -23,7 +30,7 @@ export const ThisDay = ({ weather }: Props) => {
       </div>
       <div className={s.bottom_block}>
         <div className={s.this_time}>
-          Время: <span> {dateNow}</span>
+          Время: <span> {timeWithTimezone}</span>
         </div>
         <div className={s.this_city}>
           Город: <span> {weather.name}</span>

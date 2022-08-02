@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Select from 'react-select'
+import Select from 'react-select';
+  
 import { GlobalSvgSelector } from "../../assets/icons/global/GlobalSvgSelector";
 import { cities } from "../../constans/cities";
-import { Theme } from "../../contex/ThemeContext";
+import { Theme } from "../../context/context";
 import { useCustomDispatch } from "../../hooks/store";
 import { useTheme } from "../../hooks/useTheme";
-import { selectCurrentCity } from "../../store/selectors";
-import { citySlice } from "../../store/slices/CitySlice";
+import { selectCurrentCity } from "../../store/selectedCity/selectors";
+import { citySlice } from "../../store/selectedCity/slice";
 import s from './Header.module.scss';
 
-interface Props {
 
-}
-export const Header = (props: Props) => {
+export const Header = () => {
 
   const dispatch = useCustomDispatch();
   const theme = useTheme();
   const selectedCity = useSelector(selectCurrentCity)
 
 
-  const colourStyles = {
+  const colorStyles = {
     control: (styles: any) => ({
       ...styles,
       backgroundColor: theme.theme === Theme.DARK ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
@@ -52,7 +50,7 @@ export const Header = (props: Props) => {
       </div>
       <div className={s.wrapper}>
         <div className={s.change_theme} onClick={changeTheme}><GlobalSvgSelector icon="change_theme" /></div>
-        <Select styles={colourStyles} options={cities} value={selectedCity} onChange={changeSelectedCity} />
+        <Select styles={colorStyles} options={cities} value={selectedCity} onChange={changeSelectedCity} />
       </div>
     </header>
   )

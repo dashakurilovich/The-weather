@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react"
-import { Theme, ThemeContext } from "../contex/ThemeContext"
+import { Theme, ThemeContext } from "../context/context";
 import { changeCssRootVariables } from "../model/ChangeCssRootVariables";
 import { storage } from "../model/Storage";
 

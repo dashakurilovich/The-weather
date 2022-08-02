@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
-import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
-import { selectCurrentCity, selectCurrentWeatherData } from '../../store/selectors';
-import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather';
+
 import { Days } from './components/Days/Days';
 import { ThisDay } from './components/ThisDay/ThisDay';
 import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
+import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
+import { fetchCurrentWeather } from '../../store/currentWeather/thunks';
+import { fetchForecastWeather } from '../../store/forecastWeather/thunks';
 import s from './Home.module.scss';
+import { selectCurrentCity } from '../../store/selectedCity/selectors';
+import { selectCurrentWeatherData } from '../../store/currentWeather/selectors';
 
 interface Props {
 
@@ -21,7 +24,8 @@ export const Home = (props: Props) => {
   )
   useEffect(() => {
     dispatch(fetchCurrentWeather(selectedCity.label))
-  }, [selectedCity]);
+    dispatch(fetchForecastWeather(selectedCity.label))
+  }, [dispatch, selectedCity]);
 
   return (
     <div className={s.home}>

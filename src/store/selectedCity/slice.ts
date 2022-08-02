@@ -1,14 +1,10 @@
+import { createSlice } from "@reduxjs/toolkit";
 
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AxiosResponse } from "axios";
-import React from "react";
 import { cities } from "../../constans/cities";
+import { CityInfo } from "../types/types";
 
 export type CitySlice = {
-  selectedCity: {
-    label: string,
-    value: string
-  }
+  selectedCity: CityInfo
 }
 
 const initialState: CitySlice = {

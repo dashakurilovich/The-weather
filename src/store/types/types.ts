@@ -11,11 +11,15 @@ export type Weather = {
   weather: {
     main: string,
     description: string
-    icon:string
+    icon: string
   },
   wind: {
     speed: number
   },
-  timezone:number
+  timezone: number
 }
 
+export type CityInfo = {
+  label: string,
+  value: string
+}

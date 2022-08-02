@@ -7,4 +7,5 @@ export const cities = [
   { value: 'city-5', label: 'Лондон' },
   { value: 'city-6', label: 'Москва' },
   { value: 'city-7', label: 'Токио' },
+  { value: 'city-8', label: 'Тбилиси' },
 ]

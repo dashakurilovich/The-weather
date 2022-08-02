@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import React from "react";
 import { GlobalSvgSelector } from "../../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../../hooks/store";
-import { selectCurrentWeatherData } from "../../../../store/selectors";
+import { selectCurrentWeatherData } from "../../../../store/currentWeather/selectors";
 import { Weather } from "../../../../store/types/types";
 import s from './ThisDay.module.scss';
 

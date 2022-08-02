@@ -72,7 +72,7 @@ export const GlobalSvgSelector = ({ icon }: Props) => {
           <path d="M10 9C10 13.97 14.03 18 19 18C23.502 18 27.23 14.696 27.894 10.38C28.55 10.134 29.258 10 30 10C33.314 10 36 12.686 36 16C36 19.314 33.314 22 30 22H8C3.582 22 0 18.418 0 14C0 9.582 3.582 6 8 6C8.834 6 9.636 6.128 10.392 6.364C10.136 7.198 10 8.082 10 9Z" fill="url(#paint1_radial_2_538)" />
           <defs>
             <linearGradient id="paint0_linear_2_538" x1="18" y1="0" x2="18" y2="22" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#9FC7FF" />
+              <stop stopColor="#9FC7FF" />
               <stop offset="1" stopColor="#9BC1F5" />
             </linearGradient>
             <radialGradient id="paint1_radial_2_538" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.75395 -30.6966) rotate(-90) scale(20.9574 6.69705)">

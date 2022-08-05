@@ -19,6 +19,15 @@ export type Weather = {
   timezone: number
 }
 
+export type ForecastWeather = Weather & {
+  dt_txt: string,
+  dt: number
+}
+
+export type ForecastWeatherList = {
+  list: Array<ForecastWeather>
+}
+
 export type CityInfo = {
   label: string,
   value: string

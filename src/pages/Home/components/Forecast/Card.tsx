@@ -1,13 +1,10 @@
 import React from 'react';
 import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector';
-import { Day } from './Days';
 import s from './Days.module.scss';
 
-interface Props {
-  day: Day
-}
 
-export const Card = ({ day }: Props) => {
+
+export const Card = (day: any) => {
   return (
     <div className={s.card}>
       <div className={s.day}>{day.day}</div>

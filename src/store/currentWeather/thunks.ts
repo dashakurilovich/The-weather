@@ -6,7 +6,6 @@ export const fetchCurrentWeather = (city: string) => async (dispatch: AppDispatc
   try {
     dispatch(currentWeatherSlice.actions.fetchCurrentWeather());
     const res = await WeatherService.getCurrentWeather(city);
-    console.log('res');
 
     dispatch(currentWeatherSlice.actions.fetchCurrentWeatherSuccess(res))
 

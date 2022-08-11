@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Days } from './components/Days/Days';
+import Forecast from './components/Forecast';
 import { ThisDay } from './components/ThisDay/ThisDay';
 import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
 import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
@@ -33,7 +33,7 @@ export const Home = (props: Props) => {
         <ThisDay weather={weather} />
         <ThisDayInfo weather={weather} />
       </div>
-      <Days />
+      <Forecast />
     </div >
   )
 }

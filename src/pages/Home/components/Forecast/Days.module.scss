@@ -79,7 +79,7 @@
 
 .cancel,
 .tab {
-  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.5);
   border-radius: 5px;
   padding: 9px 20px;
   background-color: var(#{--components-background-default});
@@ -88,12 +88,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  width: 100%;
   cursor: pointer;
-}
-
-.cancel {
-  margin-right: 0;
 }
 
 .tab {
@@ -105,4 +101,9 @@
 
 .tabsWrapper {
   display: flex;
+  width: 100%;
+
+  :not(:last-child) {
+    margin-right: 15px;
+  }
 }

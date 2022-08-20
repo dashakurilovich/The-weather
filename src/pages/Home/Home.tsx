@@ -10,11 +10,9 @@ import s from './Home.module.scss';
 import { selectCurrentCity } from '../../store/selectedCity/selectors';
 import { selectCurrentWeatherData } from '../../store/currentWeather/selectors';
 
-interface Props {
 
-}
 
-export const Home = (props: Props) => {
+export const Home = () => {
   const dispatch = useCustomDispatch();
   const selectedCity = useCustomSelector(selectCurrentCity)
 

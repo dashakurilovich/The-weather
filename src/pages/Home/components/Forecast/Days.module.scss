@@ -92,10 +92,16 @@
   cursor: pointer;
 }
 
+.selectedTab {
+  background-color: $primary-color;
+  color:white
+}
+
 .tab {
   &:active {
     background: $primary-color;
     color: #fff;
+    opacity: 0.5;
   }
 }
 

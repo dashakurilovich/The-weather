@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCustomSelector } from '../../../../hooks/store';
 import { selectForecastWeatherData } from '../../../../store/forecastWeather/selectors';
 import s from './Days.module.scss';
@@ -31,10 +31,16 @@ const Forecast = () => {
   const uniqDays = getUniqDays(forecastWeatherData.list)
   const [selectedDay, setSelectedDay] = useState(uniqDays[0] || null)
 
+  // useEffect(() => {
+  //   if (uniqDays?.length && !selectedDay) {
+  //     setSelectedDay(uniqDays[0])
+  //   }
+  // }, [selectedDay, uniqDays])
+
 
   return (
     <div>
-      {uniqDays?.length && <Tabs days={uniqDays} selectedDay={selectedDay} />}
+      {uniqDays?.length && <Tabs days={uniqDays} selectedDay={selectedDay} setSelectedDay={setSelectedDay} />}
       {/* <ForecastInfo /> */}
     </div>
 

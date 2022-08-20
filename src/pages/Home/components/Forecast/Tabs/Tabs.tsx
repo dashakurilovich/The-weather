@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import s from './Days.module.scss';
+import s from './Tabs.module.scss';
 
 interface TabsProps {
   days: Array<string>

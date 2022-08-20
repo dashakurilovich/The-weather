@@ -2,9 +2,9 @@ import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react';
 import { useCustomSelector } from '../../../../hooks/store';
 import { selectForecastWeatherData } from '../../../../store/forecastWeather/selectors';
-import { Card } from './Card';
-import s from './Days.module.scss';
-import { Tabs } from './Tabs';
+import { Card } from './Card/Card';
+import s from './Forecast.module.scss';
+import { Tabs } from './Tabs/Tabs';
 
 // export interface Day {
 //   day: string,

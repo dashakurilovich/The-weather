@@ -1,0 +1,45 @@
+@import '../../../../../styles/variables.scss';
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+
+  .tabsWrapper {
+    display: flex;
+    width: 100%;
+
+    :not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .cancel,
+  .tab {
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.5);
+    border-radius: 5px;
+    padding: 9px 20px;
+    background-color: var(#{--components-background-default});
+    font-size: 18px;
+    color: var(#{--text-color-default});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .tab {
+    &:active {
+      background: $primary-color;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+
+  .selectedTab {
+    background-color: $primary-color;
+    color: white
+  }
+
+}

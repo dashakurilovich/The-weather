@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector';
-import s from './Days.module.scss';
+import { GlobalSvgSelector } from '../../../../../assets/icons/global/GlobalSvgSelector';
+import s from './Card.module.scss';
 
 
 

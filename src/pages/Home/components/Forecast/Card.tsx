@@ -1,20 +1,31 @@
+import dayjs from 'dayjs';
 import React from 'react';
 import { GlobalSvgSelector } from '../../../../assets/icons/global/GlobalSvgSelector';
 import s from './Days.module.scss';
 
 
 
-export const Card = (day: any) => {
+export const Card = ({ weather }: any) => {
+
+  const formattedTime = dayjs(weather.dt * 1000).format("HH:mm")
+  const formattedDate = dayjs(weather.dt * 1000).format("DD MMM")
+
   return (
     <div className={s.card}>
-      <div className={s.day}>{day.day}</div>
-      <div className={s.day_info}>{day.day_info}</div>
-      <div className={s.img}>
-        <GlobalSvgSelector icon={day.icon_id} />
+      <div>
+        {formattedTime}
       </div>
-      <div className={s.temp_day}>{day.temp_day}</div>
-      <div className={s.temp_night}>{day.temp_night}</div>
-      <div className={s.info}>{day.info}</div>
+      <div>
+        {formattedDate}
+      </div>
+      {/* <div className={s.day}>{forecast.day}</div>
+      <div className={s.day_info}>{forecast.day_info}</div>
+      <div className={s.img}>
+        <GlobalSvgSelector icon={forecast.icon_id} />
+      </div>
+      <div className={s.temp_day}>{forecast.temp_day}</div>
+      <div className={s.temp_night}>{forecast.temp_night}</div>
+      <div className={s.info}>{forecast.info}</div> */}
     </div>
   )
 }

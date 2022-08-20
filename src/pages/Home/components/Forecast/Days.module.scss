@@ -17,9 +17,8 @@
   background: var(#{--card-background-default});
   border-radius: 10px;
   padding: 10px;
-  width: 149px;
+  width: 150px;
   transition: 0.3s;
-  cursor: pointer;
 
   .day {
     margin-bottom: 7px;
@@ -65,10 +64,7 @@
     margin-bottom: 6px;
   }
 
-  &:hover {
-    box-shadow: var(#{--card-shadow-default});
-    border-radius: 0px 0px 20px 20px;
-  }
+
 }
 
 .tabs {
@@ -94,7 +90,7 @@
 
 .selectedTab {
   background-color: $primary-color;
-  color:white
+  color: white
 }
 
 .tab {
@@ -102,6 +98,15 @@
     background: $primary-color;
     color: #fff;
     opacity: 0.5;
+  }
+}
+
+.forecastContainer {
+  display: flex;
+  flex-direction: row;
+
+  :not(:last-child) {
+    margin-right: 15px;
   }
 }
 
